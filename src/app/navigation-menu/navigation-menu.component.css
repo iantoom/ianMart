@@ -1,0 +1,5 @@
+.active-link {
+    font-weight: 900;
+    color: deeppink;
+    border-left: solid deeppink;
+}

@@ -1,0 +1,16 @@
+<mat-toolbar color="accent">
+  <h5>User Profile</h5>
+</mat-toolbar>
+
+<mat-horizontal-stepper #stepper="matHorizontalStepper">
+  <mat-step [stepControl]="userForm">
+    <form [formGroup]="userForm"]>
+      <ng-template matStepLabel>Account Information</ng-template>
+      <div class="stepContent">
+        <div fxLayout="row" fxLayout.lt-sm="column">
+          
+        </div>
+      </div>
+    </form>
+  </mat-step>
+</mat-horizontal-stepper>
