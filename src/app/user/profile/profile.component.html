@@ -7,8 +7,15 @@
     <form [formGroup]="userForm"]>
       <ng-template matStepLabel>Account Information</ng-template>
       <div class="stepContent">
-        <div fxLayout="row" fxLayout.lt-sm="column">
-          
+        <div fxLayout="row" fxLayout.lt-sm="column"
+        [formGroup]="userForm.get('name')" fxLayoutGap="10px">
+          <mat-form-field fxFlex="40%">
+            <input matInput placeholder="First Name"
+            aria-label="First Name" formControlName="first">
+            <mat-error *ngIf="userForm.get('name').get('first').hasError('required')">
+              First Name is required
+            </mat-error>
+          </mat-form-field>
         </div>
       </div>
     </form>
